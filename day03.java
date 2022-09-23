@@ -39,7 +39,7 @@ public class day03{
     }
 }
 
- */
+
 //算术运算     数字相加(数字进行运算时，数据类型不一样的时候不能运算，需要转换成一样的，才能运算)
 //转换方式     1。隐式转换（小->大）                           2.强制转换（大->小）
 //隐式转换的规则：（1）小的先会变成大的再运算  （2）byty,short,char三种类型再运算的时候，都会先生成int,然后在进行运算（byte<short<int<long<float<double）
@@ -47,5 +47,68 @@ public class day03 {
     public static void main(String[] args) {
 
     }
+
+//强制转换：   格式 ： 目标数据诶性 变量名 = （目标数据类型） 被强制转换的数据
+//Eg:
+public class day03{
+    public static void main(String[] args) {
+        byte b1 = 10;
+        byte b2 = 10;
+        byte result =(byte)(b1 + b2);
+        System.out.println(result);
+    }
 }
-//强制转换：
+
+
+//字符串相加:    1.当“+”操作符出现在字符串中，这个"+"是字符串的连接符，前后数据会进行拼接。
+//             2.连续进行"+"操作时，从左到右逐个执行。
+//Eg
+public class day03{
+    public static void main(String[] args) {
+        int age = 18;
+        System.out.println("我的年龄是" + age + "岁");
+        System.out.println("我的年龄是" + "age" + "岁");
+        System.out.println( 1 +2+ "abc" + 2 + 1);//对了
+    }
+}
+
+//字符相加规则： 当（字符+字符）/（字符+数字）时，会把字符通过ASCII码表查询到对应的数字在进行计算
+public class day03{
+    public static void main(String[] args) {
+        System.out.println("abc"+'a');
+        System.out.println(10+'a');
+    }
+
+}
+
+//自增运算符 (++)、(--)
+//1.++和--无论是放在变量的前面还是后面，单独写一行结果是一样
+//2.参与运算与（C语言）中的一样
+public class day03 {
+    public static void main(String[] args) {
+        int a = 10;
+        a++;
+        System.out.println(a);
+        ++a;
+        System.out.println(a);
+        a--;
+        System.out.println(a);
+        --a;
+        System.out.println(a);
+    }
+}
+
+//赋值运算符
+//关系运算符 Eg：
+//逻辑运算符1.&(并且)、2.|（或者） 3.^(逻辑异或) 4.！（取反）不要多写，要么不写，要么写一次
+public class day03{
+    public static void main(String[] args) {
+        //相同为FALSE，不同为TRUE
+        System.out.println(true ^ true);
+        System.out.println(false ^ false);
+        System.out.println(false ^ true);
+        System.out.println(true ^ false);
+    }
+}
+ */
+
