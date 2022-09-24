@@ -110,5 +110,35 @@ public class day03{
         System.out.println(true ^ false);
     }
 }
+//短路逻辑运算符（&&）、（||）。具有短路效果，即：当左边的表达式能确定最终结果，那么右边的就不会参与运行了
+//&.|,无论左边是true,false,右边都要执行
+public class day03 {
+    public static void main(String[] args) {
+        System.out.println(true || true);
+        System.out.println(false || false);
+        System.out.println(false || true);
+        System.out.println(true || false);
+
+        int a = 10;
+        int b = 10;
+        boolean result = ++a < 5 && ++b < 5;
+        System.out.println(result);//false
+        System.out.println(a);//11
+        System.out.println(b);//10
+
+    }
+}
  */
+//三元运算符    作用：可以进行判断，根据判断的结果得到不同的内容
+//            格式：关系表达式？表达式（true）：表达式(false)；
+public class day03{
+    public static void main(String[] args) {
+    //需求： 使用三元运算符，获取两个数中较大的数；
+        int number1 = 10;
+        int number2 = 20;
+        int result = number1 < number2 ? number1 : number2;
+        System.out.println(number1 < number2 ? number1 : number2);
+        System.out.println(result);
+    }
+}
 
