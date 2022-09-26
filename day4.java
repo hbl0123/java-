@@ -36,7 +36,7 @@ switch(表达式){
     default;
             语句体 n+1;
             break;
-}*/
+}*/ /*
 public class day4 {
     public static void main(String[] args) {
         String noodles = "兰州拉面";
@@ -56,6 +56,7 @@ public class day4 {
         }
     }
 }
+*/
 //switch的扩展知识点和练习     1、default的位置和省略
 //                         （1）位置：default 不一定要写在最下面，我们可以写在任意位置，只不过习惯会写在最下面
 //                         (2)省略：default 可以省略不写，语句不会有问题，但是不建议省略。
@@ -66,3 +67,11 @@ public class day4 {
 /*                      3、Switch新特性  ：代替 ->   {} 代替 break
 
  */
+//循环语句
+//1.for(初始化语句；条件判断语句；条件控制语句){              2.while             3.do...while
+//                      循环体语句 ；+}
+public class day4 {
+    public static void main(String[] args) {
+
+    }
+}
