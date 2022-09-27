@@ -68,8 +68,29 @@ public class day4 {
 
  */
 //循环语句
-//1.for(初始化语句；条件判断语句；条件控制语句){              2.while             3.do...while
-//                      循环体语句 ；+}
+//1.for(初始化语句；条件判断语句；条件控制语句){            2.初始化语句                        3.do...while语句
+//                                                     while(条件判断语句){
+//                     循环体语句 ；+}                      循环体语句；
+//                                                       条件控制语句；}
+//
+//扩展小点：1.求和的变量不能定义再循环的里面，因为变量值在所属的大括号中有效
+//        2.如果我们把变量定义在新换的里面，那么当前的变量只能在本次循环中有效，
+//          当本次循环结束以后，变量就会从内存中消失.
+//          当地二次循环开始的时候，又会重新定义一个新的变量
+/*public class day4 {
+    public static void main(String[] args) {
+//利用while语句打印1-100
+        int i =1;
+        while(i < 100){
+            System.out.println(i);
+            i++;
+        }
+    }
+}
+ */
+//for和while的对比：
+//for循环中：知道循环的次数或者循环的范围
+//while循环中不知道循环的次数和范围，只知道循环的结束条件
 public class day4 {
     public static void main(String[] args) {
 
