@@ -91,4 +91,20 @@ public class day4 {
 //for和while的对比：
 //for循环中：知道循环的次数或者循环的范围
 //while循环中不知道循环的次数和范围，只知道循环的结束条件
+/*高级循环。
+1.无限循环(常用while循环)
+2.跳转控制语句
 
+
+ */
+public class day4 {
+    public static void main(String[] args) {
+        for(int i = 0; i <= 5; i++){
+            if(i == 3){
+                //continue;//结束本次循环，继续向下循环
+                break;//结束整个循环
+            }
+            System.out.println("小老虎再吃第" + i + "个包子");
+        }
+    }
+}
