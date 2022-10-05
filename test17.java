@@ -42,17 +42,17 @@ public class test17 {
         int number = qj.nextInt();
         boolean falg = true;
 
-        for(int i = 2; i <= number; i++ ){
-            if(number % i ==0){
+        for(int i = 2; i <= number; i++ ) {
+            if (number % i == 0) {
                 falg = false;
-                System.out.println(number + "不是一个质数");
                 break;
             }
+        }
             if(falg){
                 System.out.println(number + "是一个质数");
             }else{
                 System.out.println(number + "不是一个质数");
             }
-        }
     }
 }
+//使用二分法更简单哦
