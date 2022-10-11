@@ -119,39 +119,30 @@ public class test14 {
         Scanner qj = new Scanner(System.in);
         System.out.println("请输入你的税前工资，好吧？");
         int salary = qj.nextInt();
+        double number = 0;
 
-        double  numebr1 = 0;
-        double  numebr2 = 0;
-        double  numebr3 = 0;
-        double  numebr4 = 0;
-        double  numebr5 = 0;
-        double  numebr6 = 0;
-        double  numebr7 = 0;
-        double  numebr8 = 0;
-
-        double  lateSalary = salary * (1 - 0.1);
-        if(lateSalary > 5000){
-             numebr1  =  lateSalary - 5000;
-            if(numebr1 < 3000){
-                  numebr2 = numebr1 * 0.03;
-            } else if (numebr1 > 3000 && numebr1 <12000) {
-                 numebr3 = (numebr1 - 3000) * 0.1;
-            } else if (numebr1 > 12000 && numebr1 < 25000) {
-                 numebr4 = (numebr1 - 12000) * 0.2;
-            } else if (numebr1 > 25000 && numebr1 < 35000) {
-                 numebr5 = (numebr1 -25000) * 0.25;
-            } else if (numebr1 > 35000 && numebr1 < 55000) {
-                 numebr6 =(numebr1 - 35000) * 0.3;
-            } else if (numebr1 >55000 && numebr1 < 80000) {
-                 numebr7 = (numebr1 -55000) * 0.35;
-            }
-            else{
-                numebr1 = (numebr1 -80000) * 0.4;
-            }
+        double  lateSalary = salary *1 - 0.1 * salary;
+        if(lateSalary < 5000){
+        }else {
+            number = lateSalary - 5000;
         }
-        double lastSalary = lateSalary  - numebr2 - numebr3 - numebr4 - numebr5 - numebr6 - numebr7 - numebr8;
-        System.out.println("你的工资是" + lastSalary +"元");
 
-
+        if(number <3000 && number > 0){
+            number = number * 0.03;
+        } else if (number>3000 && number < 12000) {
+            number = (number - 3000) * 0.1 + 3000 * 0.03;
+        } else if (number>12000 && number <25000) {
+            number = (number - 12000) * 0.2 + 9000 * 0.1 + 3000 * 0.3;
+        } else if (number>25000 && number <35000) {
+            number = (number - 25000) *0.25 + 13000 * 0.2 + 9000 * 0.1 + 3000 * 0.3;
+        } else if (number>35000 && number <55000) {
+            number = (number - 35000) *0.3 + 10000 * 0.25 + 13000 * 0.2 + 9000 * 0.1 + 3000 * 0.3;
+        } else if (number>55000 && number <80000) {
+            number = (number - 55000) *0.35 + 20000 * 0.3 + 10000 * 0.25 + 13000 * 0.2 + 9000 * 0.1 + 3000 * 0.3;
+        } else if (number > 80000) {
+            number = (number - 80000)*0.45 + 25000 * 0.35 + 20000 * 0.3 + 10000 * 0.25 + 13000 * 0.2 + 9000 * 0.1 + 3000 * 0.3;
+        }
+        System.out.println("你的所得税"+number);
+        System.out.println("你的工资是"+ (lateSalary - number));
     }
 }

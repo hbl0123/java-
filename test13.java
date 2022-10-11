@@ -8,8 +8,14 @@ package com.homeWork.test;
 //          减去10 的次数就是商；
 public class test13 {
     public static void main(String[] args) {
-        int dividend = 100;
-        int divisor = 10;
-
+        int dividend = 101;//被除数
+        int divisor = 10;//除数
+        int number = 0;
+        while(dividend > divisor){
+            dividend = dividend - divisor;
+            number++;
+        }
+        System.out.println("余数是：" + dividend);
+        System.out.println("商为："+number);
     }
 }

@@ -25,7 +25,9 @@ public class test10 {
 3.机票改签
 4.退出服务
 其他按键也是退出服务。
+
  */
+
 public class test10 {
     public static void main(String[] args) {
         Scanner qj = new Scanner(System.in);
@@ -40,4 +42,5 @@ public class test10 {
         }
     }
 }
+
 

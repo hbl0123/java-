@@ -31,11 +31,9 @@ public class test21 {
 
         for (int i = 0; i < arr.length; i++) {
             int number = qj.nextInt(arr.length);
-
             int temp = arr[i];
             arr[i] = arr[number];
-            arr[number] = arr[i];
-
+            arr[number] = temp;
         }
 
         for (int i = 0; i < arr.length; i++) {
