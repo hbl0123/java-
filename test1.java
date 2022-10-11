@@ -1,27 +1,36 @@
-package com.homeWork.test;
-
-import java.util.Scanner;
-
 public class test1 {
     public static void main(String[] args) {
-       //键盘录入一个三位数，获取其中的个位，十位，百位
-
-        //1.键盘录入
-        Scanner qj =new Scanner(System.in);
-        System.out.println("请输入一个三位数");
-        int number = qj.nextInt();
-
-        //2.获取个位，十位，百位
-        //公式：
-        //个位： 数字 % 10
-        //十位： 数字 / 10 % 10
-        //百位:  数字 / 100 % 10
-        //...
-        int gewei = number % 10;
-        int shiwei = number / 10 % 10;
-        int baiwei = number / 100 % 10;
-        System.out.println(gewei);
-        System.out.println(shiwei);
-        System.out.println(baiwei);
+        for (int i = 0; i <6 ; i++) {
+            int k = ++i;
+            while(k < 5){
+                System.out.println(i);
+                break;
+            }
+        }
+    }
+}/*
+public class test2{
+    public static void main(String[] args) {
+        int sum = 0;
+        for (int i = 1; i < 10; i++) {
+            do{
+                i++                                                                                                                                        ;
+                if(i % 2 != 0)
+                    sum+=i;
+            }while(i < 6);
+        }
+        System.out.println(sum);
     }
 }
+public class test3 {
+    public static int GetMul(int number) {
+        if(number == 1){
+            return 1;
+        }else{
+            return number * GetMul(number - 1);
+        }
+    }
+    public static void main(String[] args) {
+        System.out.println(GetMul(4));
+    }
+}*/
