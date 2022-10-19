@@ -59,8 +59,7 @@ public class test25 {
         double result = num1 + num2 + num3;
         return  result;
     }
-}*/
-
+}
 //定义方法，比较两个长方形的面积
 public class test25 {
     public static void main(String[] args) {
@@ -82,4 +81,26 @@ public class test25 {
             return b;
         }
     }
+}*/
+//需求： 使用方法重造的思想，设计比较两个整数是否相同的方法。
+//要求： 兼容全整数类型（byte,short,in,long）
+public class test25 {
+    public static void main(String[] args) {
+        byte a = 10;
+        byte b = 20;
+       Compare(a,b);
+    }
+    public static void Compare(byte a, byte b){
+       System.out.println(a == b);
+    }
+    public static void Compare(int  a, int b){
+        System.out.println(a == b);
+    }
+    public static void Compare(short a, short b){
+        System.out.println(a == b);
+    }
+    public static void Compare(long a, long b){
+        System.out.println(a == b);
+    }
+
 }
