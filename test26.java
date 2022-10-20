@@ -27,7 +27,7 @@ public class test26 {
         }
         System.out.println(Max);
     }
-}*/
+}
 // 需求; 定义一个方法判断数组中的某一个数是否存在，将结果返回给调用处
 public class test26 {
     public static void main(String[] args) {
@@ -43,3 +43,27 @@ public class test26 {
         return false;
     }
 }
+//复制数组
+//需求： 定义一个方法copyOfRang(int[] arr,int from, int to)
+//功能： 将数组arr中从索引form(包含form)开始。
+//      带索引to结束（不包含to）的元素复制到新数组中，将新数组返回
+public class test26 {
+    public static void main(String[] args) {
+        int []arr = {12,22,33,44,55};
+      int []arr1 = copyOfRang(arr,2,4);
+        for (int i = 0; i <arr1.length ; i++) {
+            System.out.print(arr1[i] + "  ");
+        }
+    }
+    public static int[] copyOfRang(int arr[],int from,int to){
+        int []newArr =new int[to - from];
+        //伪造数组
+        int index = 0;
+
+        for (int i = from; i < to; i++) {
+            newArr[index] = arr[i];
+            index++;
+        }
+        return newArr;
+    }
+}*/
