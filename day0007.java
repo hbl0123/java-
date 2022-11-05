@@ -1,4 +1,4 @@
-package com.宝贝.arithmeticoperator;
+package com.宝贝.学习天数;
 
 public class day0007 {
     public static void main(String[] args){

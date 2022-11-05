@@ -1,4 +1,4 @@
-package com.宝贝.arithmeticoperator;
+package com.宝贝.学习天数;
 //目的： 复习前半段课程学习的java编程知识，能够使用所学的知识解决问题，提升能力
 //二维数组的动态初始化
 //格式 ： 数组类型[][]数组名 = new数组类型[M][N]
