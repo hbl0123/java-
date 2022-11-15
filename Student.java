@@ -1,30 +1,104 @@
-package 封装;
+package com.宝贝.作业;
 
 public class Student {
-    private String name;
-    private int age;
+    private int sNo;
+    private String sNmae;
+    private String sSex;
+    private int sAge;
+    private double sJava;
 
-    //如果我们自己没有写任何的构造方法
-    //那么虚拟机给我们加一个空参构造方法
-public Student(String name,int age){
-    this.age =age;
-    this.name = name;
-
-}
-
-    public String GetName(){
-        return name;
+    public Student() {
     }
 
-    public void setName(String name){
-        this.name = name;
+    public Student(int sNo, String sNmae, String sSex, int sAge, double sJava) {
+        this.sNo = sNo;
+        this.sNmae = sNmae;
+        this.sSex = sSex;
+        this.sAge = sAge;
+        this.sJava = sJava;
     }
 
-    public int GetAge(){
-        return age;
+    /**
+     * 获取
+     * @return sNo
+     */
+    public int getSNo() {
+        return sNo;
     }
 
-    public void setAge(int age){
-        this.age = age;
+    /**
+     * 设置
+     * @param sNo
+     */
+    public void setSNo(int sNo) {
+        this.sNo = sNo;
+    }
+
+    /**
+     * 获取
+     * @return sNmae
+     */
+    public String getSNmae() {
+        return sNmae;
+    }
+
+    /**
+     * 设置
+     * @param sNmae
+     */
+    public void setSNmae(String sNmae) {
+        this.sNmae = sNmae;
+    }
+
+    /**
+     * 获取
+     * @return sSex
+     */
+    public String getSSex() {
+        return sSex;
+    }
+
+    /**
+     * 设置
+     * @param sSex
+     */
+    public void setSSex(String sSex) {
+        this.sSex = sSex;
+    }
+
+    /**
+     * 获取
+     * @return sAge
+     */
+    public int getSAge() {
+        return sAge;
+    }
+
+    /**
+     * 设置
+     * @param sAge
+     */
+    public void setSAge(int sAge) {
+        this.sAge = sAge;
+    }
+
+    /**
+     * 获取
+     * @return sJava
+     */
+    public double getSJava() {
+        return sJava;
+    }
+
+    /**
+     * 设置
+     * @param sJava
+     */
+    public void setSJava(double sJava) {
+        this.sJava = sJava;
+    }
+
+    public String toString() {
+        return "Student{sNo = " + sNo + ", sNmae = " + sNmae + ", sSex = " + sSex + ", sAge = " + sAge + ", sJava = " + sJava + "}";
     }
 }

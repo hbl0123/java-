@@ -1,43 +1,91 @@
-package com.homeWork.test;
+package com.宝贝.String;
+//拼接字符串
+/*
+    定义一个方法，把int数组中的数据按照指定的格式拼接成一个字符串返回。
+    调用该方法，并在控制台输出结果。
+    例如：
+        数组为int[] arr = {1,2,3};
+        执行方法后的输出结果为： [1,2,3]
+ */
+/*
+public class test05 {
+//利用 StringBuilder
+    public static void main(String[] args) {
+        //定义一个数组arr
+        int [] arr = {1,2,3};
+
+        StringBuilder qj = new StringBuilder();
+        qj.append("[").append(arr[0]).append(",").append(arr[1]).append(",").append(arr[2]).append("]");
+
+        System.out.println(qj);
+    }
+}
+ */
+//利用方法：
+/*
+public class test05 {
+    public static void main(String[] args) {
+
+        int []arr = {1,2,3};
+
+        System.out.println(Get(arr));
+
+    }
+    public static String Get(int []arr){
+        if(arr.length == 0){
+            return "[";
+        }
+
+        if(arr == null) {
+            return "";
+        }
+
+        String  result = "[";
+        for (int i = 0; i < arr.length; i++) {
+            if(i == arr.length - 1){
+                result = result + arr[i];
+            }else{
+                result = result + arr[i] + ", ";
+            }
+        }
+        result = result + "]";
+        return result;
+    }
+}
+ */
+//字符串反转
+/*
+    定义一个方法，实现字符串反转
+    键盘录入一个字符，调用该方法之后，在控制台输出结果
+    例如，键盘录入abc, 输出结果 cba
+
+ */
 
 import java.util.Scanner;
 
-/*题目1(训练)
-
-         身高是具有遗传性的，子女的身高和父母的身高有一定的关系。假定，父母和子女的身高遗传关系如下：
-
-         ​	儿子身高（厘米）＝(父亲身高＋母亲身高) ×1.08÷2
-
-         ​	女儿身高（厘米）＝(父亲身高×0.923＋母亲身高) ÷2
-
-         现有父亲身高177CM,母亲身高165CM。求子女身高分别预计为多少？
-
-  */
 public class test05 {
-     public static void main(String[] args) {
-         //手动定义
-         int fatherheight1 = 177;
-         int motherheight1 = 165;
-         double sonheight1 =  (fatherheight1 + motherheight1) * 1.08 / 2;
-         double girlheght1 =  (fatherheight1 * 0.923 + motherheight1) / 2;
-         System.out.println(sonheight1);
-         System.out.println(girlheght1);
+    public static void main(String[] args) {
+        Scanner q = new Scanner(System.in);
 
+        String []arr= new String[3];
 
-         //键盘录入
-         System.out.println("请输入爸爸的身高");
-         Scanner qj1 = new Scanner(System.in);
-         int fatherheight2 = qj1.nextInt();
+        for (int i = 0; i < arr.length; i++) {
+            String n = q.next();
+            arr[i] = n;
+        }
 
-         System.out.println("请输入妈妈的身高");
-         Scanner qj2 = new Scanner(System.in);
-         int motherheight2 = qj2.nextInt();
+        Get(arr);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + "  ");
+        }
 
-         double sonheight2 =  (fatherheight2 + motherheight2) * 1.08 / 2;
-         double girlheght2 =  (fatherheight2 * 0.923 + motherheight2) / 2;
-         System.out.println(sonheight2);
-         System.out.println(girlheght2);
-
-
-     }
+    }
+    public static String[] Get(String []arr) {
+        for (int i = 0, j = arr.length - 1; i < j; i++, j--) {
+            String temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+        return arr;
+    }
 }
